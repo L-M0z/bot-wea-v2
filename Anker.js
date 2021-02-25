@@ -67,15 +67,15 @@ const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRando
 
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:julian\n'
-            + 'ORG:Owner owipspabot;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=18662118049:+1 (866) 211-8049\n'
+            + 'FN:dimassaid\n'
+            + 'ORG:DF Shirakami;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=81387118721:+62 813 8711-8721\n'
             + 'END:VCARD'
 
 prefix = "!"
-name = "owipspabot"
+name = "Shirakami Bot "
 rdaftar = "TERIMA KASIH TELAH DAFTAR MENJADI TEMEN owipspabot😁"
-rmenu = "HAI TEMEN owipspabot👋 JANGAN LUPA DONASI YAA:)"
+rmenu = "HAI TEMEN Shirakami Bot 👋 JANGAN LUPA DONASI YAA:)"
 limitt = 100
 ban = []
 
