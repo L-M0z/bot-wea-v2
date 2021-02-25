@@ -22,7 +22,7 @@ prefix " ${prefix} "
 
 *prefix adalah suatu bubuh kata diawal kalimat*
 
-❐ *jam*        : *${jam} WIB*
+❐ *jam*      : *${jam} WIB*
 ❐ *tanggal*  : *${tanggal}*
 ❐  *runtime* : *${kyun(uptime)}
 
@@ -145,8 +145,8 @@ const donasi = (name) => {
 	return `       
 ╭─────「 *DONASI SEIKHLASNYA* 」
 ┴
-│√ *gopay: 089610153337*
-│√ *dana : 089610153337*
+│√ *gopay: 081387118721*
+│√ *dana : 081387118721*
 ┬
 ╰──────「 *BY ${name}* 」
 
