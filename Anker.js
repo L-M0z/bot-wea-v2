@@ -492,7 +492,31 @@ async function starts() {
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
 					client.sendMessage(from, `perintah Diterima, membuka blokir ${body.slice(9)}@c.us`, text)
 				    break
-				    
+				case 'savevid':
+			        if (!isOwner) return reply(`Khusus Owner`)
+				if (!isQuotedVideo) return reply('Reply videonya')
+				yoo = body.slice(8)
+				if (!yoo) return reply('Nama videonya')
+				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await Client.downloadMediaMessage(boij)
+				videonye.push(`${yoo}`)
+				fs.writeFileSync(`./temp/video/${yoo}.mp4`, delb)
+				fs.writeFileSync('./temp/vid.json', JSON.stringify(videonye))
+				Client.sendMessage(from, `Sukses Menambahkan Video`, MessageType.text, { quoted: mek })
+				break
+                                case 'saveimg':
+			        if (!isOwner) return reply(`Khusus Owner`)
+				if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+	                 
+				yoo = body.slice(8)
+				if (!yoo) return reply('Nama imagenya')
+				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await Client.downloadMediaMessage(boij)
+				videonye.push(`${yoo}`)
+				fs.writeFileSync(`./temp/image/${yoo}.jpg`, delb)
+				fs.writeFileSync('./temp/img.json', JSON.stringify(videonye))
+				Client.sendMessage(from, `Sukses Menambahkan Video`, MessageType.text, { quoted: mek })
+				break    
 				case 'ocr':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
